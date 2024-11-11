@@ -1,0 +1,38 @@
+<div class="login-page">
+  <div class="login-left">
+    <div class="logo">Logo</div>
+    <div class="image-placeholder">
+      <img src="../../assets/bank.png" alt="Exercise Image" />
+    </div>
+  </div>
+
+  <div class="login-right">
+    <a href="#" class="back-link">← Back</a>
+    <h2>Account Login</h2>
+    <p>If you are already a member, you can login with your client card/username and password.</p>
+
+    <form>
+      <div class="form-group">
+        <label for="client-identifier">Client Card / Username</label>
+        <input type="text" id="client-identifier" name="client-identifier" placeholder="Client Card / Username" [(ngModel)]="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" />
+      </div>
+
+      <div class="form-group remember-me">
+        <input type="checkbox" id="remember-me" />
+        <label for="remember-me">Remember me</label>
+      </div>
+
+      <button type="button" class="login-button" (click)="onLogin()">Log in</button>
+
+    </form>
+
+    <div class="signup-link">
+      Don’t have an account? <a href="#">Sign up here</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    background-color: #ffa9a3; /* Adjust color as needed */
+    width: 200px; /* Width of the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Evenly spaces items */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 90%; /* Full height for flex positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes items across full height */
+  }
+  
+  .sidebar li {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .sidebar li:hover {
+    background-color: #e57373; /* Change background color on hover */
+    color: #fff;               /* Change text color on hover */
+  }
+  .active {
+    background-color: #e57373;
+    color: #fff;
+    border-radius: 4px;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  .header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  .transfer-section,
+  .debit-card,
+  .chart,
+  .transactions {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .transfer-section form input,
+  .transfer-section form button {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  .transactions ul {
+    list-style: none;
+    padding: 0;
+  }
+  .transfer-button {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .transfer-button:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #fff; /* Change text color to white on hover */
+    border-color: #333; /* Ensure border matches the background on hover */
+  }
+  
+  

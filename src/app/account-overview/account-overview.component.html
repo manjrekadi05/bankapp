@@ -1,0 +1,78 @@
+<div class="account-overview">
+    <div class="header-section">
+      <div class="account-tabs">
+        <button class="tab-button" 
+                [class.active-tab]="selectedTab === 'Chequing Account'" 
+                (click)="selectTab('Chequing Account')">Chequing Account</button>
+        <button class="tab-button" 
+                [class.active-tab]="selectedTab === 'Savings Account'" 
+                (click)="selectTab('Savings Account')">Savings Account</button>
+        <button class="tab-button" 
+                [class.active-tab]="selectedTab === 'Credit Cards'" 
+                (click)="selectTab('Credit Cards')">Credit Cards</button>
+        <button class="tab-button" 
+                [class.active-tab]="selectedTab === 'Loan Account'" 
+                (click)="selectTab('Loan Account')">Loan Account</button>
+      </div>
+      <div class="greeting">
+        <h1>Hello, {{ username }}</h1>
+      </div>
+    </div>
+  
+    <!-- Conditional content for Chequing Account -->
+    <div *ngIf="selectedTab === 'Chequing Account'" class="transfer-sections">
+      <div class="transfer-box">
+        <h3>Transfer between accounts</h3>
+        <form>
+          <select>
+            <option>Account</option>
+          </select>
+          <input type="text" placeholder="Amount" />
+          <button type="submit" class="transfer-button">Transfer</button>
+        </form>
+      </div>
+      <div class="transfer-box">
+        <h3>Interac e-transfer</h3>
+        <form>
+          <select>
+            <option>Contact</option>
+          </select>
+          <input type="text" placeholder="Amount" />
+          <button type="submit" class="transfer-button">Transfer</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Conditional content for Savings Account -->
+    <div *ngIf="selectedTab === 'Savings Account'" class="account-details">
+      <div class="account-summary">
+        <h3>Account Summary</h3>
+        <ul>
+          <li><strong>Current Balance:</strong> $5,000.00</li>
+          <li><strong>Credit Limit:</strong> $2,000.00</li>
+          <li><strong>Available Credit:</strong> $1,500.00</li>
+        </ul>
+      </div>
+    </div>
+    
+  
+    <!-- Transactions Section -->
+    <div class="transactions-section">
+      <h4>Transactions</h4>
+      <ul class="transaction-list">
+        <li class="transaction-item">
+          <span class="transaction-label">Menu Label</span>
+          <span class="transaction-description">Menu description.</span>
+        </li>
+        <li class="transaction-item">
+          <span class="transaction-label">Menu Label</span>
+          <span class="transaction-description">Menu description.</span>
+        </li>
+        <li class="transaction-item">
+          <span class="transaction-label">Menu Label</span>
+          <span class="transaction-description">Menu description.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
